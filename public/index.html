@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">网站导航</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 主题切换按钮 -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-text">暗色</span>
+    </button>
+
+    <div class="container">
+        <!-- 左侧分类导航 -->
+        <aside class="sidebar">
+            <div class="logo" id="site-logo">
+                <span class="logo-icon" id="logo-icon">BT</span>
+                <span class="logo-text" id="logo-text">网站导航</span>
+            </div>
+            <nav class="category-nav">
+                <ul id="category-list">
+                    <!-- 分类列表将通过JS动态生成 -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 右侧主内容区 -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1 id="current-category-title">所有分类</h1>
+                <!-- 搜索框区域 -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <select id="search-engine" class="search-engine-select">
+                            <option value="baidu" data-url="https://www.baidu.com/s?wd=" data-icon="🔍">百度</option>
+                            <option value="google" data-url="https://www.google.com/search?q=" data-icon="🌐">Google</option>
+                            <option value="bing" data-url="https://www.bing.com/search?q=" data-icon="🔎">必应</option>
+                            <option value="sogou" data-url="https://www.sogou.com/web?query=" data-icon="🔍">搜狗</option>
+                            <option value="360" data-url="https://www.so.com/s?q=" data-icon="🔍">360搜索</option>
+                        </select>
+                        <input type="text" id="search-input" class="search-input" placeholder="输入关键词搜索...">
+                        <button id="search-btn" class="search-btn">
+                            <span class="search-icon">🔍</span>
+                            搜索
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <div id="links-container" class="links-grid">
+                <!-- 链接卡片将通过JS动态生成 -->
+            </div>
+        </main>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- 第一行：版权和备案信息 -->
+            <div class="footer-main">
+                <div class="footer-section">
+                    <p class="copyright" id="copyright-text">
+                        © 2024 网站导航. All rights reserved.
+                    </p>
+                </div>
+                <div class="footer-section" id="icp-section" style="display: none;">
+                    <p class="beian-info">
+                        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">
+                            <span class="beian-icon">🏛️</span>
+                            <span id="icp-number">京ICP备12345678号-1</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="footer-section" id="police-section" style="display: none;">
+                    <p class="police-beian">
+                        <a href="http://www.beian.gov.cn/" target="_blank" rel="noopener">
+                            <span class="police-icon">🚔</span>
+                            <span id="police-number">京公网安备 11010802012345号</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <!-- 第二行：运行时间 -->
+            <div class="footer-runtime">
+                <p class="runtime-info">
+                    <span class="runtime-icon">⏰</span>
+                    网站已运行 <span id="runtime-display">计算中...</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
